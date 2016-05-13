@@ -48,14 +48,9 @@ class FileBackend extends \TYPO3\Flow\Log\Backend\FileBackend
             return;
         }
 
-        if (function_exists('posix_getpid')) {
-            $processId = posix_getpid();
-        } else {
-            $processId = 'unknow';
-        }
         $ipAddress = ($this->logIpAddress === true && isset($_SERVER['REMOTE_ADDR'])) ? $_SERVER['REMOTE_ADDR'] : 'unknow';
         $severityLabel = (isset($this->severityLabels[$severity])) ? $this->severityLabels[$severity] : 'unknow';
-        $output = sprintf('pid=%s remote_address=%s severity=%s %s', $processId, $ipAddress, $severityLabel, $message);
+        $output = sprintf('remote_address=%s severity=%s %s', $ipAddress, $severityLabel, $message);
 
         if ($this->fileHandle !== false) {
             fputs($this->fileHandle, $output . PHP_EOL);
