@@ -1,0 +1,14 @@
+{
+    "name": "ttree/flow-devhelper",
+    "type": "typo3-flow-package",
+    "description": "Flow Framework performance monitoring helper",
+    "license": "MIT",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ttree\\Flow\\DevHelper\\": "Classes"
+        }
+    }
+}

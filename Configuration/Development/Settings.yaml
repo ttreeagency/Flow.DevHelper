@@ -1,0 +1,7 @@
+Ttree:
+  Flow:
+    DevHelper:
+      log:
+        backendOptions:
+          logFileURL: '%FLOW_PATH_DATA%Logs/PerformanceMetrics_Development.log'
+          severityThreshold: '%LOG_DEBUG%'
