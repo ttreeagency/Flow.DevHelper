@@ -44,9 +44,9 @@ class DispatcherMetricAspect
      */
     public function timerMetric(JoinPointInterface $joinPoint)
     {
-        $this->metricsStorage->register(new TimerMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch'));
+        $this->metricsStorage->register(new TimerMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch', ['message' => 'Before dispatching']));
         $joinPoint->getAdviceChain()->proceed($joinPoint);
-        $this->metricsStorage->register(new TimerMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch'));
+        $this->metricsStorage->register(new TimerMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch', ['message' => 'After dispatching']));
     }
 
 }
