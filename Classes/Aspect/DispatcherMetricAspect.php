@@ -35,7 +35,7 @@ class DispatcherMetricAspect
      */
     public function memoryMetric(JoinPointInterface $joinPoint)
     {
-        $this->metricsStorage->register(new MemoryUsageMetric('DispatcherDispatch'));
+        $this->metricsStorage->register(new MemoryUsageMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch'));
     }
 
     /**
@@ -44,9 +44,9 @@ class DispatcherMetricAspect
      */
     public function timerMetric(JoinPointInterface $joinPoint)
     {
-        $this->metricsStorage->register(new TimerMetric('DispatcherDispatch'));
+        $this->metricsStorage->register(new TimerMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch'));
         $joinPoint->getAdviceChain()->proceed($joinPoint);
-        $this->metricsStorage->register(new TimerMetric('DispatcherDispatch'));
+        $this->metricsStorage->register(new TimerMetric('TYPO3\Flow\Mvc\Dispatcher::Dispatch'));
     }
 
 }
