@@ -40,8 +40,8 @@ Create an internal timer. Display to start time, delta time between two invocati
 ## How to work with logfmt ?
 
 Tools like ```grep```, ```sed``` and ```awk``` are your best friend ;) but you can use more dedicated tools. Check the
-article from (Codeship)[https://blog.codeship.com/logfmt-a-log-format-thats-easy-to-read-and-write/] and use 
-the (```htutils```)[https://github.com/brandur/hutils] to see the full power of logfmt.
+article from [Codeship](https://blog.codeship.com/logfmt-a-log-format-thats-easy-to-read-and-write/) and use 
+the [```htutils```](https://github.com/brandur/hutils) to see the full power of logfmt.
 
 ## Acknowledgments
 
