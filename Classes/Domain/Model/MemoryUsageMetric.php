@@ -27,15 +27,15 @@ class MemoryUsageMetric extends Metric
 
     /**
      * @param string $name
-     * @param array $data
+     * @param array $additionalData
      */
-    public function __construct($name, array $data = [])
+    public function __construct($name, array $additionalData = [])
     {
         $memory = memory_get_usage();
         $data = Arrays::arrayMergeRecursiveOverrule([
             'memory' => $memory,
             'human_memory' => $this->humanFilesize($memory),
-        ], $data);
+        ], $additionalData);
         
         parent::__construct($name, $data);
     }

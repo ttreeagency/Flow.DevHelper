@@ -12,6 +12,7 @@ namespace Ttree\Flow\DevHelper\Domain\Model;
  */
 
 use TYPO3\Flow\Annotations as Flow;
+use TYPO3\Flow\Utility\Arrays;
 
 /**
  * Metric
@@ -28,9 +29,9 @@ class TimerMetric extends Metric
 
     /**
      * @param string $name
-     * @param array $data
+     * @param array $additionalData
      */
-    public function __construct($name, array $data = [])
+    public function __construct($name, array $additionalData = [])
     {
         $time = microtime(true);
         if (isset(self::$lastTimer[$name])) {
@@ -50,6 +51,8 @@ class TimerMetric extends Metric
 
             $data = self::$lastTimer[$name];
         }
+
+        $data = Arrays::arrayMergeRecursiveOverrule($data, $additionalData);
 
         parent::__construct($name, $data);
     }
