@@ -13,7 +13,6 @@ namespace Ttree\Flow\DevHelper\Domain\Model;
 
 use Ttree\Flow\DevHelper\Contract\MetricInterface;
 use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Utility\Arrays;
 
 /**
  * Metric

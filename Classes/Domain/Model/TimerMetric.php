@@ -11,9 +11,7 @@ namespace Ttree\Flow\DevHelper\Domain\Model;
  * source code.
  */
 
-use Ttree\Flow\DevHelper\Traits\HumanTrait;
 use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Utility\Arrays;
 
 /**
  * Metric
