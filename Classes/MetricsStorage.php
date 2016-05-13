@@ -15,7 +15,6 @@ use Ttree\Flow\DevHelper\Domain\Model\Metric;
 use TYPO3\Flow\Annotations as Flow;
 use TYPO3\Flow\Configuration\ConfigurationManager;
 use TYPO3\Flow\Exception;
-use TYPO3\Flow\Log\Backend\FileBackend;
 use TYPO3\Flow\Log\Logger;
 use TYPO3\Flow\Log\LoggerFactory;
 use TYPO3\Flow\Object\ObjectManagerInterface;
@@ -99,7 +98,7 @@ class MetricsStorage
         if ($this->logger !== null) {
             return;
         }
-        $this->logger = $this->loggerFactory->create('Ttree.Flow.DevHelper', Logger::class, FileBackend::class, $this->settings['log']['backendOptions']);
+        $this->logger = $this->loggerFactory->create('Ttree.Flow.DevHelper', Logger::class, Log\Backend\FileBackend::class, $this->settings['log']['backendOptions']);
     }
 
     /**

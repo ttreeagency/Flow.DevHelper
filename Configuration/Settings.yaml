@@ -9,3 +9,4 @@ Ttree:
           maximumLogFileSize: 10485760
           logFilesToKeep: 5
           logMessageOrigin: FALSE
+          logIpAddress: TRUE

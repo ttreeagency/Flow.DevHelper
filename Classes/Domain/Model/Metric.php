@@ -82,6 +82,6 @@ abstract class Metric implements MetricInterface
             }
             $message[] = sprintf('%s=%s', $name, $value);
         }
-        return implode(', ', $message);
+        return implode(' ', $message);
     }
 }
