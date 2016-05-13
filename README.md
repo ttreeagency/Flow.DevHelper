@@ -37,6 +37,12 @@ Create an internal timer. Display to start time, delta time between two invocati
     pid=259 remote_address=172.17.0.2 severity=info id=57214c547492f1.85042719, at=1461800020.8265 name=TYPO3\Flow\Mvc\Dispatcher::Dispatch metric=Ttree\Flow\DevHelper\Domain\Model\MemoryUsageMetric memory=70936144 human_memory=67.65MB
     pid=259 remote_address=172.17.0.2 severity=info id=57214c547492f1.85042719, at=1461800020.827 name=FinishedRuntimeRun metric=Ttree\Flow\DevHelper\Domain\Model\MemoryUsageMetric memory=70946984 human_memory=67.66MB
 
+## How to work with logfmt ?
+
+Tools like ```grep```, ```sed``` and ```awk``` are your best friend ;) but you can use more dedicated tools. Check the
+article from (Codeship)[https://blog.codeship.com/logfmt-a-log-format-thats-easy-to-read-and-write/] and use 
+the (```htutils```)[https://github.com/brandur/hutils] to see the full power of logfmt.
+
 ## Acknowledgments
 
 Development sponsored by [ttree ltd - neos solution provider](http://ttree.ch).
