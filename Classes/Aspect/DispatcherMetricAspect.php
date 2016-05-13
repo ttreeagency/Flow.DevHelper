@@ -13,7 +13,6 @@ namespace Ttree\Flow\DevHelper\Aspect;
 
 use Ttree\Flow\DevHelper\Domain\Model\MemoryUsageMetric;
 use Ttree\Flow\DevHelper\Domain\Model\TimerMetric;
-use Ttree\Flow\DevHelper\Traits\HumanTrait;
 use TYPO3\Flow\Annotations as Flow;
 use TYPO3\Flow\Aop\JoinPointInterface;
 
@@ -24,8 +23,6 @@ use TYPO3\Flow\Aop\JoinPointInterface;
  */
 class DispatcherMetricAspect
 {
-    use HumanTrait;
-
     /**
      * @var \Ttree\Flow\DevHelper\MetricsStorage
      * @Flow\Inject
