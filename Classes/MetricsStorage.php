@@ -118,7 +118,7 @@ class MetricsStorage
         $messages = [];
         /** @var Metric $metric */
         foreach ($this->metrics as $metric) {
-            $message = sprintf('id=%s, %s', $this->requestIdentifier, $metric->logfmt());
+            $message = sprintf('id=%s %s', $this->requestIdentifier, $metric->logfmt());
             $messages[] = $message;
             $this->logger->log($message, LOG_INFO, null, 'Ttree.Flow.DevHelper');
         }
